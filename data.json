@@ -4,6 +4,14 @@
 		"cont": "Europe",
 		"type": "City",
 		"lang": "French",
-		"cost": 4
+		"cost": 4,
 	},
+	{
+		"place": "Great Wall",
+		"cont": "China",
+		"type": "rural",
+		"lang": "Chinese",
+		"cost": 4,
+		"lm": true
+	}
 ]
