@@ -209,7 +209,7 @@ function clear() {
 }
 
 function fares(dest, callback) {
-    $.ajax({url: "http://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?origin=BOS&destination=" + dest + "&departure_date=2017-10-15&return_date=2017-10-21&number_of_results=3&apikey=INyVXYYjr3fOYl1QYFAZN5nwKC6lat9f", success: function(result){
+    $.ajax({url: "https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?origin=BOS&destination=" + dest + "&departure_date=2017-10-15&return_date=2017-10-21&number_of_results=3&apikey=INyVXYYjr3fOYl1QYFAZN5nwKC6lat9f", success: function(result){
         console.log(result.results[0]);
         callback(result.results[0].fare.total_price);
         return;
