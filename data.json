@@ -1,14 +1,33 @@
 [
 	{
 		"place": "Paris",
-		"cont": "Europe",
-		"type": "City",
+		"country": "France",
+		"type": {
+      "city": 5,
+      "nature": 1,
+      "forest": 1,
+      "beach": 0,
+      "rural": 0
+    },
 		"lang": "French",
 		"cost": 4,
 	},
 	{
+		"place": "Ho Chi Minh City",
+		"country": "Vietnam",
+		"type": {
+      "city": 4,
+      "nature": 2,
+      "forest": 2,
+      "beach": 2,
+      "rural": 2
+    },
+		"lang": "Vietnamese",
+		"cost": 2,
+	},
+	{
 		"place": "Great Wall",
-		"cont": "China",
+		"country": "China",
 		"type": "rural",
 		"lang": "Chinese",
 		"cost": 4,
