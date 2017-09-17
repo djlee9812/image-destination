@@ -1,4 +1,21 @@
 .result {
-  padding: 10px;
-  background: #ddd;
+  margin: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Overpass', sans-serif;
+}
+
+p, span, li {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#inputImage {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.center {
+  text-align: center;
 }

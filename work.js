@@ -148,8 +148,8 @@ function filter(data) {
         items.sort(function(a, b) {
             return b.score - a.score
         });
-        if(items.length > 5){
-            items = items.slice(0,5)
+        if(items.length > 7){
+            items = items.slice(0,7)
         }
         for(i in items){
             results(items[i], i)
@@ -175,10 +175,15 @@ function order(scores, callback){
 }
 
 function results(item, i){
+    let dollars = ''
+    for (i=0; i<item.cost; i++){
+        dollars += '<i class="fa fa-usd" aria-hidden="true"></i>'
+    }
+    console.log(dollars);
     var html = [
     '<div class="result">',
     '<h1 class="heading">' + item.place + ', ' + item.country + '</h1>',
-    '<p>Price range:'+item.cost+'</p>',
+    dollars,
     '</div>'
     ].join("\n");
     $("#results").append(html)
