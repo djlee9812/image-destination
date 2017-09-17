@@ -129,42 +129,42 @@ function filter(data) {
     }
     //use callback to solve synchronous problem
     order(scores, function(items){
+        $("#results").html("");
         items.sort(function(a, b) {
-            return b.score - a.score
+            return a.score - b.score
         });
         if(items.length > 7){
             items = items.slice(0,7)
         }
-        clear();
         console.log(items)
         fares(items[0].code, function(price) {
             items[0].fare = price;
             results(items[0], 0);
-        });
-        fares(items[1].code, function(price) {
-            items[1].fare = price;
-            results(items[1], 1);
-        });
-        fares(items[2].code, function(price) {
-            items[2].fare = price;
-            results(items[2], 2);
-        });
-        fares(items[3].code, function(price) {
-            items[3].fare = price;
-            results(items[3], 3);
-        });
-        fares(items[4].code, function(price) {
-            items[4].fare = price;
-            results(items[4], 4);
-        });
-        fares(items[5].code, function(price) {
-            items[5].fare = price;
-            results(items[5], 5);
-        });
-        fares(items[6].code, function(price) {
-            items[6].fare = price;
-            results(items[6], 6);
-        });
+            fares(items[1].code, function(price) {
+                items[1].fare = price;
+                results(items[1], 1);
+                fares(items[2].code, function(price) {
+                    items[2].fare = price;
+                    results(items[2], 2);
+                    fares(items[3].code, function(price) {
+                        items[3].fare = price;
+                        results(items[3], 3);
+                        fares(items[4].code, function(price) {
+                            items[4].fare = price;
+                            results(items[4], 4);
+                            fares(items[5].code, function(price) {
+                                items[5].fare = price;
+                                results(items[5], 5);
+                            });
+                            fares(items[6].code, function(price) {
+                                items[6].fare = price;
+                                results(items[6], 6);
+                            });
+                        });
+                    });
+                });
+            });
+        });      
     });
 }
 
@@ -176,7 +176,7 @@ function order(scores, callback){
             //do comparison here, put min 5
             val.score = 0
             for(i in scores){
-                val.score += scores[i] * data[key].type[i]
+                val.score += Math.sqrt(Math.pow(scores[i] - data[key].type[i], 2))
                 data[key].fare = 0
 
             }
@@ -206,7 +206,6 @@ function results(item, i){
 }
 
 function clear() {
-    $("#results").html();
 }
 
 function fares(dest, callback) {

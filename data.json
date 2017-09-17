@@ -36,12 +36,12 @@
   	"code": "CPT",
     "country": "South Africa",
     "type": { 
-      "city": 4,
+      "city": 1,
       "nature": 2,
-      "forest": 1,
-      "beach": 1,
-      "rural": 3,
-      "historical": 1  
+      "forest": 0,
+      "beach": 2,
+      "rural": 2,
+      "historical": 2 
     },
     "cost": 1,
     "pic": "http://www.travelstart.co.za/blog/wp-content/uploads/2013/11/Greg-Lumley.jpg",
@@ -85,11 +85,11 @@
     "country": "India",
     "type": { 
       "city": 1,
-      "nature": 1,
+      "nature": 2,
       "forest": 1,
       "beach": 0,
       "rural": 2,
-      "historical": 4
+      "historical": 5
     },
     "cost": 2,
     "pic": "http://www.tajmahal.org.uk/gifs/taj-mahal.jpeg",
@@ -102,7 +102,7 @@
     "type": { 
       "city": 1,
       "nature": 5,
-      "forest": 4,
+      "forest": 3,
       "beach": 0,
       "rural": 2,
       "historical": 1  
@@ -121,7 +121,7 @@
       "forest": 0,
       "beach": 0,
       "rural": 1,
-      "historical": 6  
+      "historical": 5 
     },
     "cost": 3,
     "pic": "http://s1.ibtimes.com/sites/www.ibtimes.com/files/styles/embed/public/2014/11/07/rtr4clof.jpg",
@@ -134,8 +134,8 @@
     "type": { 
       "city": 0,
       "nature": 4,
-      "forest": 1,
-      "beach": 6,
+      "forest": 2,
+      "beach": 5,
       "rural": 0,
       "historical": 0   
     },
@@ -148,12 +148,12 @@
     "code": "ODB",
     "country": "Spain",
     "type": { 
-      "city": 2,
+      "city": 3,
       "nature": 1,
       "forest": 0,
       "beach": 0,
       "rural": 0,
-      "historical": 7  
+      "historical": 5  
     },
     "cost": 3,
     "pic": "https://theredlist.com/media/database/architecture/history/architecture-maure/espagne/grande-mosquee-de-cordoue/002_grande-mosquee-de-cordoue_theredlist.jpg",
@@ -164,7 +164,7 @@
   	"code": "DEL",
     "country": "India",
     "type": { 
-      "city": 5,
+      "city": 4,
       "nature": 3,
       "forest": 2,
       "beach": 0,
@@ -180,7 +180,7 @@
     "code": "NRT",
     "country": "Japan",
     "type": { 
-      "city": 6,
+      "city": 5,
       "nature": 2,
       "forest": 1,
       "beach": 0,
@@ -196,11 +196,11 @@
     "code": "LHR",
     "country": "England",
     "type": { 
-      "city": 4,
-      "nature": 2,
+      "city": 3,
+      "nature": 3,
       "forest": 2,
       "beach": 0,
-      "rural": 1,
+      "rural": 2,
       "historical": 4
     },
     "cost": 3,
@@ -229,7 +229,7 @@
     "code": "CNS",
 		"type": {
       "city": 0,
-      "nature": 2,
+      "nature": 3,
       "forest": 1,
       "beach": 5,
       "rural": 1,
@@ -244,9 +244,9 @@
 		"country": "China",
     "code": "HET",
 		"type": {
-      "city": 2,
+      "city": 1,
       "nature": 3,
-      "forest": 1,
+      "forest": 2,
       "beach": 0,
       "rural": 5,
       "historical": 1
@@ -261,8 +261,8 @@
     "code": "DUD",
 		"type": {
       "city": 1,
-      "nature": 3,
-      "forest": 2,
+      "nature": 4,
+      "forest": 3,
       "beach": 0,
       "rural": 5,
       "historical": 0
@@ -292,9 +292,9 @@
 		"country": "USA",
     "code": "BUF",
 		"type": {
-      "city": 2,
-      "nature": 5,
-      "forest": 2,
+      "city": 1,
+      "nature": 6,
+      "forest": 1,
       "beach": 1,
       "rural": 1,
       "historical": 0
