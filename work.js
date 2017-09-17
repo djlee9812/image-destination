@@ -54,11 +54,11 @@ function filter(data) {
     }
     let descriptions = data.description.tags
     //count landmarks
-    let landmark = ""
+    /*let landmark = ""
     if(typeof(data.categories[0].detail.landmarks[0]) !== 'undefined') {
         landmark = data.categories[0].detail.landmarks[0].name
         //console.log(landmark)
-    }
+    }*/
     //arrays of descriptors 
     //use dictionary hash
     const city = ["building", "subway", "car", "street", "traffic", "skyscraper", "river", "bridge", "light", "tower"]
