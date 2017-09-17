@@ -32,7 +32,7 @@ function processImage() {
     .done(function(data) {
         // Show formatted JSON on webpage.
         filter(data)
-        console.log(data)
+        //console.log(data)
     })
 
     .fail(function(jqXHR, textStatus, errorThrown) {
@@ -51,13 +51,14 @@ function filter(data) {
         forest: 0,
         beach: 0,
         rural: 0,
+        historical: 0
     }
     let descriptions = data.description.tags
     //count landmarks
     let landmark = ""
     if(typeof(data.categories[0].detail.landmarks[0]) !== 'undefined') {
         landmark = data.categories[0].detail.landmarks[0].name
-        console.log(landmark)
+        //console.log(landmark)
     }
     //arrays of descriptors 
     //use dictionary hash
@@ -134,16 +135,51 @@ function filter(data) {
                 continue 
             }
         }
+        for(x in historical){
+            if (descriptions[i] === historical[x]) {
+                scores.historical += 1
+                continue
+            }
+        }
     }
-    console.log(scores)
 
-    //access data.json
-    $.getJSON( "data.json", function( data ) {
-        console.log(data)
-      var items = [];
-      $.each( data, function( key, val ) {
-        items.push( {key: val} );
-        //do comparison here, put min 5
+    //use callback to solve synchronous problem
+    order(scores, function(items){
+        items.sort(function(a, b) {
+            return b.score - a.score
+        });
+        if(items.length > 5){
+            items = items.slice(0,5)
+        }
+        for(i in items){
+            results(items[i], i)
+        }
     });
-  });
+}
+
+
+function order(scores, callback){
+    var items = [];
+    $.getJSON( "data.json", function( data ) {
+        $.each( data, function( key, val ) {
+            //do comparison here, put min 5
+            val.score = 0
+            for(i in scores){
+                val.score += scores[i] * data[key].type[i]
+            }
+            items.push(data[key]);
+        });
+        callback(items);
+        return;
+    });
+}
+
+function results(item, i){
+    var html = [
+    '<div class="result">',
+    '<h1 class="heading">' + item.place + ', ' + item.country + '</h1>',
+    '<p>Price range:'+item.cost+'</p>',
+    '</div>'
+    ].join("\n");
+    $("#results").append(html)
 }

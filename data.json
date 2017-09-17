@@ -7,10 +7,11 @@
       "nature": 1,
       "forest": 1,
       "beach": 0,
-      "rural": 0
+      "rural": 0,
+      "historical": 4
     },
-		"lang": "French",
 		"cost": 4,
+		"lm": false
 	},
 	{
 		"place": "Ho Chi Minh City",
@@ -20,16 +21,23 @@
       "nature": 2,
       "forest": 2,
       "beach": 2,
-      "rural": 2
+      "rural": 2,
+      "historical": 4
     },
-		"lang": "Vietnamese",
 		"cost": 2,
+		"lm": false
 	},
 	{
 		"place": "Great Wall",
 		"country": "China",
-		"type": "rural",
-		"lang": "Chinese",
+		"type": {
+      "city": 1,
+      "nature": 2,
+      "forest": 1,
+      "beach": 0,
+      "rural": 3,
+      "historical": 5
+    },
 		"cost": 4,
 		"lm": true
 	}
