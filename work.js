@@ -1,5 +1,5 @@
 function processImage() {
-    var subscriptionKey = config.MSKEY;
+    var subscriptionKey = '34e6e96447014c988a6ccf64ecb3f221';
     var uriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze";
 
     // Request parameters.
