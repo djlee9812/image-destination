@@ -19,3 +19,7 @@ p, span, li {
 .center {
   text-align: center;
 }
+
+.dest-img{
+  width: 200px;
+}

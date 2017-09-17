@@ -1,6 +1,7 @@
 [
 	{
 		"place": "Paris",
+    "code": "CDG",
 		"country": "France",
 		"type": {
       "city": 5,
@@ -11,10 +12,12 @@
       "historical": 4
     },
 		"cost": 4,
+    "pic": "https://cache-graphicslib.viator.com/graphicslib/thumbs360x240/2050/SITours/eiffel-tower-dinner-and-seine-river-cruise-in-paris-459739.jpg",
 		"lm": false
 	},
 	{
 		"place": "Ho Chi Minh City",
+  	"code": "SGN",
 		"country": "Vietnam",
 		"type": {
       "city": 4,
@@ -25,11 +28,189 @@
       "historical": 4
     },
 		"cost": 2,
+    "pic": "http://static.asiawebdirect.com/m/bangkok/portals/vietnam/shared/teasersL/ho-chi-minh-city/hcmc-city-centre/teaserMultiLarge/imageHilight/teaser.jpeg.jpg",
 		"lm": false
+	},
+  {
+    "place": "Cape Town",
+  	"code": "CPT",
+    "country": "South Africa",
+    "type": { 
+      "city": 4,
+      "nature": 2,
+      "forest": 1,
+      "beach": 1,
+      "rural": 3,
+      "historical": 1  
+    },
+    "cost": 1,
+    "pic": "http://www.travelstart.co.za/blog/wp-content/uploads/2013/11/Greg-Lumley.jpg",
+    "lm": false
+	},
+  {
+    "place": "Grand Canyon",
+    "code": "GCN",
+    "country": "USA", 
+    "type": { 
+      "city": 0,
+      "nature": 5,
+      "forest": 2,
+      "beach": 0,
+      "rural": 1,
+      "historical": 1 
+    },
+    "cost": 2,
+    "pic": "https://media.deseretdigital.com/file/b41fa91284?crop=top:0|left:0|width:1260|height:670|gravity:Center&quality=55&interlace=none&resize=width:1260&order=resize,crop&c=14&a=e0f131f0",
+    "lm": true
+	},
+  {
+    "place": "Las Vegas",
+    "code": "LAS",
+    "country": "USA",
+    "type": { 
+      "city": 5,
+      "nature": 1,
+      "forest": 0,
+      "beach": 0,
+      "rural": 1,
+      "historical": 0  
+    },
+    "cost": 4,
+    "pic": "http://svcdn.simpleviewinc.com/v3/cache/lasvegas/14679F47EC9B965E4A510BFB528895CE.jpg",
+    "lm": false
+	},
+  {
+    "place": "Taj Mahal",
+    "code": "DEL",
+    "country": "India",
+    "type": { 
+      "city": 1,
+      "nature": 1,
+      "forest": 1,
+      "beach": 0,
+      "rural": 2,
+      "historical": 4
+    },
+    "cost": 2,
+    "pic": "http://www.tajmahal.org.uk/gifs/taj-mahal.jpeg",
+    "lm": true
+	},
+  {
+    "place": "Swiss Alps",
+    "code": "ZRH",
+    "country": "Switzerland",
+    "type": { 
+      "city": 1,
+      "nature": 5,
+      "forest": 4,
+      "beach": 0,
+      "rural": 2,
+      "historical": 1  
+    },
+    "cost": 2,
+    "pic": "https://wallpapercave.com/wp/2qTUpIl.jpg",
+    "lm": false
+	},
+  {
+    "place": "Berlin Wall",
+    "code": "TXL",
+    "country": "Germany",
+    "type": { 
+      "city": 3,
+      "nature": 1,
+      "forest": 0,
+      "beach": 0,
+      "rural": 1,
+      "historical": 6  
+    },
+    "cost": 3,
+    "pic": "http://s1.ibtimes.com/sites/www.ibtimes.com/files/styles/embed/public/2014/11/07/rtr4clof.jpg",
+    "lm": true
+	},
+	{
+    "place": "Maya Bay",
+    "code": "KBV",
+    "country": "Thailand",
+    "type": { 
+      "city": 0,
+      "nature": 4,
+      "forest": 1,
+      "beach": 6,
+      "rural": 0,
+      "historical": 0   
+    },
+    "cost": 1,
+    "pic": "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_720,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/ajerejxqj9b5zeznvql7/MayaBayPhiPhiSpeedboatTour.jpg",
+    "lm": false
+	},
+	{
+    "place": "Great Mosque of Cordoba",
+    "code": "ODB",
+    "country": "Spain",
+    "type": { 
+      "city": 2,
+      "nature": 1,
+      "forest": 0,
+      "beach": 0,
+      "rural": 0,
+      "historical": 7  
+    },
+    "cost": 3,
+    "pic": "https://theredlist.com/media/database/architecture/history/architecture-maure/espagne/grande-mosquee-de-cordoue/002_grande-mosquee-de-cordoue_theredlist.jpg",
+    "lm": true
+	},
+{
+    "place": "New Delhi",
+  	"code": "DEL",
+    "country": "India",
+    "type": { 
+      "city": 5,
+      "nature": 3,
+      "forest": 2,
+      "beach": 0,
+      "rural": 0,
+      "historical": 2  
+    },
+    "cost": 2,
+  	"pic": "https://cdn.getyourguide.com/niwziy2l9cvz/59T6IvcG6Q6C6uemowIoQy/7fd009a2ea7ec23bd2c415314726f7f2/New_Delhi-1112x630.jpg",
+    "lm": false
+	},
+  {
+    "place": "Tokyo",
+    "code": "NRT",
+    "country": "Japan",
+    "type": { 
+      "city": 6,
+      "nature": 2,
+      "forest": 1,
+      "beach": 0,
+      "rural": 0,
+      "historical": 3
+    },
+    "cost": 3,
+    "pic": "http://i2.cdn.cnn.com/cnnnext/dam/assets/170606110126-tokyo-skyline-super-tease.jpg",
+    "lm": false
+	},
+  {
+    "place": "Cambridge",
+    "code": "LHR",
+    "country": "England",
+    "type": { 
+      "city": 4,
+      "nature": 2,
+      "forest": 2,
+      "beach": 0,
+      "rural": 1,
+      "historical": 4
+    },
+    "cost": 3,
+    "pic": "https://media-cdn.tripadvisor.com/media/photo-s/06/7b/9e/fa/the-river-cam.jpg", 
+    "lm": false
 	},
 	{
 		"place": "Great Wall",
 		"country": "China",
+    "code": "PEK",
 		"type": {
       "city": 1,
       "nature": 2,
@@ -39,6 +220,119 @@
       "historical": 5
     },
 		"cost": 4,
+    "pic": "http://media.istockphoto.com/photos/the-great-wall-of-china-picture-id502963868?k=6&m=502963868&s=612x612&w=0&h=50ZQEBcxFIJf2RiVKOyj12Me9ogfUc6G3KlXqFXMKiM=", 
 		"lm": true
+	},
+  	{
+		"place": "Great Barrier Reef",
+		"country": "Australia",
+    "code": "CNS",
+		"type": {
+      "city": 0,
+      "nature": 2,
+      "forest": 1,
+      "beach": 5,
+      "rural": 1,
+      "historical": 0
+    },
+		"cost": 3,
+    "pic": "http://www.kuoni.co.uk/upload/inspiration/james/barrier-reef/barrier-reef.jpg", 
+		"lm": false
+	},
+  {
+		"place": "Inner Mongolia",
+		"country": "China",
+    "code": "HET",
+		"type": {
+      "city": 2,
+      "nature": 3,
+      "forest": 1,
+      "beach": 0,
+      "rural": 5,
+      "historical": 1
+    },
+		"cost": 2,
+    "pic": "http://pixdaus.com/files/items/pics/6/34/242634_62c6e53ac4991b475cea3e6b6704b64d_large.jpg", 
+		"lm": false
+	},
+  {
+		"place": "Dunedin",
+		"country": "New Zealand",
+    "code": "DUD",
+		"type": {
+      "city": 1,
+      "nature": 3,
+      "forest": 2,
+      "beach": 0,
+      "rural": 5,
+      "historical": 0
+    },
+		"cost": 3,
+    "pic": "https://s-media-cache-ak0.pinimg.com/originals/2a/a7/a3/2aa7a3134b1b20f153807ba7429a786e.jpg", 
+		"lm": false
+	},
+   {
+		"place": "Sequoia National Park",
+		"country": "USA",
+    "code": "SFO",
+		"type": {
+      "city": 0,
+      "nature": 3,
+      "forest": 5,
+      "beach": 0,
+      "rural": 2,
+      "historical": 0
+    },
+		"cost": 3,
+     "pic": "http://www.redwoodhikes.com/SequoiaNP/Congress1.jpg",
+		"lm": false
+	},
+   {
+		"place": "Niagara Falls",
+		"country": "USA",
+    "code": "BUF",
+		"type": {
+      "city": 2,
+      "nature": 5,
+      "forest": 2,
+      "beach": 1,
+      "rural": 1,
+      "historical": 0
+    },
+		"cost": 3,
+     "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/3Falls_Niagara.jpg/1200px-3Falls_Niagara.jpg",
+		"lm": false
+	},
+   {
+		"place": "Colosseum",
+		"country": "Italy",
+    "code": "FCO",
+		"type": {
+      "city": 3,
+      "nature": 3,
+      "forest": 2,
+      "beach": 0,
+      "rural": 0,
+      "historical": 5
+    },
+		"cost": 3,
+     "pic": "https://c1.staticflickr.com/8/7610/16800139540_36cf1bde89_b.jpg",
+		"lm": true
+	},
+   {
+		"place": "Amazon Rainforest",
+		"country": "Brazil",
+    "code": "MAO",
+		"type": {
+      "city": 0,
+      "nature": 3,
+      "forest": 5,
+      "beach": 0,
+      "rural": 1,
+      "historical": 0
+    },
+		"cost": 2,
+     "pic": "https://dingo.care2.com/pictures/petition_images/petition/121/761553-1403083524-wide.jpg",
+		"lm": false
 	}
 ]

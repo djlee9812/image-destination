@@ -1,7 +1,6 @@
 function processImage() {
     var subscriptionKey = '34e6e96447014c988a6ccf64ecb3f221';
     var uriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze";
-
     // Request parameters.
     var params = {
         "visualFeatures": "Categories,Description,Color",
@@ -128,7 +127,6 @@ function filter(data) {
             }
         }
     }
-
     //use callback to solve synchronous problem
     order(scores, function(items){
         items.sort(function(a, b) {
@@ -138,9 +136,35 @@ function filter(data) {
             items = items.slice(0,7)
         }
         clear();
-        for(i in items){
-            results(items[i], i)
-        }
+        console.log(items)
+        fares(items[0].code, function(price) {
+            items[0].fare = price;
+            results(items[0], 0);
+        });
+        fares(items[1].code, function(price) {
+            items[1].fare = price;
+            results(items[1], 1);
+        });
+        fares(items[2].code, function(price) {
+            items[2].fare = price;
+            results(items[2], 2);
+        });
+        fares(items[3].code, function(price) {
+            items[3].fare = price;
+            results(items[3], 3);
+        });
+        fares(items[4].code, function(price) {
+            items[4].fare = price;
+            results(items[4], 4);
+        });
+        fares(items[5].code, function(price) {
+            items[5].fare = price;
+            results(items[5], 5);
+        });
+        fares(items[6].code, function(price) {
+            items[6].fare = price;
+            results(items[6], 6);
+        });
     });
 }
 
@@ -153,6 +177,8 @@ function order(scores, callback){
             val.score = 0
             for(i in scores){
                 val.score += scores[i] * data[key].type[i]
+                data[key].fare = 0
+
             }
             items.push(data[key]);
         });
@@ -166,21 +192,31 @@ function results(item, i){
     for (i=0; i<item.cost; i++){
         dollars += '<i class="fa fa-usd" aria-hidden="true"></i>'
     }
-    console.log(dollars);
     var html = [
-    '<div class="result">',
+    '<div class="result col-md-6">',
     '<h1 class="heading">' + item.place + ', ' + item.country + '</h1>',
-    dollars,
-    '<p>Lowest Flight fares: ' + '</p>',
+    '<p>Travel Costs: ' + dollars + '</p>',
+    '<p>Lowest roundtrip airfare from your location: <i class="fa fa-usd" aria-hidden="true"></i>' + item.fare + '</p>',
+    '</div>',
+    '<div class="result col-md-6">',
+    '<img class="dest-img" src="' + item.pic + '"/>',
     '</div>'
     ].join("\n");
     $("#results").append(html)
 }
 
 function clear() {
-    $("#results").html("Your destination recommendations are:")
+    $("#results").html();
 }
 
-function fares() {
-
+function fares(dest, callback) {
+    $.ajax({url: "http://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?origin=BOS&destination=" + dest + "&departure_date=2017-10-15&return_date=2017-10-21&number_of_results=3&apikey=INyVXYYjr3fOYl1QYFAZN5nwKC6lat9f", success: function(result){
+        console.log(result.results[0]);
+        callback(result.results[0].fare.total_price);
+        return;
+    },error: function(xhr, status, error){
+        console.log(status)
+    }});
 }
+
+
