@@ -54,10 +54,11 @@ function filter(data) {
     }
     let descriptions = data.description.tags
     //count landmarks
-    /*let landmark = ""
-    if(typeof(data.categories[0].detail.landmarks[0]) !== 'undefined') {
-        landmark = data.categories[0].detail.landmarks[0].name
-        //console.log(landmark)
+    let landmark = ""
+    /*if(typeof(data.categories[0].detail.landmarks[0]) !== 'undefined') {
+        //landmark = data.categories[0].detail.landmarks[0].name
+        console.log(data.categories[0].detail.landmarks[0])
+        $("#sourceImage").after('<br><b><label for="sourceImage">' + data.categories[0].detail.landmarks[0].name + '</b></label>');
     }*/
     //arrays of descriptors 
     //use dictionary hash
